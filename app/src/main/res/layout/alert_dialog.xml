@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:elevation="2dp"
+    android:outlineAmbientShadowColor="@color/greenEnd"
+    android:outlineSpotShadowColor="@color/greenEnd">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F6F4CC">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmation"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/greenEnd"
+            android:textStyle="bold"
+            android:fontFamily="@font/yeonsung"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="6dp"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/black"
+            android:text="Do you want to continue with this selected country?"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_margin="16dp"
+                android:textSize="17sp"
+                android:elevation="2dp"
+                android:outlineAmbientShadowColor="@color/greenEnd"
+                android:outlineSpotShadowColor="@color/greenEnd"
+                android:fontFamily="@font/yeonsung"
+                android:textColor="@color/white"
+                android:text="YES"
+                android:background="@drawable/green_btn"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_no"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:fontFamily="@font/yeonsung"
+                android:text="NO"
+                android:elevation="2dp"
+                android:outlineAmbientShadowColor="@color/greenEnd"
+                android:outlineSpotShadowColor="@color/greenEnd"
+                android:layout_height="65dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/green_btn"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
