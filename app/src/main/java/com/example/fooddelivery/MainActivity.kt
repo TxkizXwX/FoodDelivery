@@ -3,7 +3,10 @@ package com.example.fooddelivery
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.fooddelivery.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,34 +16,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        changeFragment(HomeFragment())
+        val bottomNavView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        val navigationView = findNavController(R.id.fragment_container)
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
-            when(it.itemId){
-                R.id.home -> {
-                    changeFragment(HomeFragment())
-                }
-                R.id.cart -> {
-                    changeFragment(CartFragment())
-                }
-                R.id.search -> {
-                    changeFragment(SearchFragment())
-                }
-                R.id.history -> {
-                    changeFragment(HistoryFragment())
-                }
-                R.id.profile -> {
-                    changeFragment(ProfileFragment())
-                }
-            }
-            return@setOnItemSelectedListener true
-        }
-    }
-
-    fun changeFragment(fragment: Fragment){
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fragment_container,fragment)
-        fragmentTransaction.commit()
+        bottomNavView.setupWithNavController(navigationView)
     }
 }

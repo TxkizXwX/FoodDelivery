@@ -41,8 +41,8 @@ private lateinit var handler: Handler
         viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                viewPager2.removeCallbacks(runnable)
-                viewPager2.postDelayed(runnable,2000)
+                handler.removeCallbacks(runnable)
+                handler.postDelayed(runnable,2000)
             }
         })
     }
@@ -61,12 +61,12 @@ private lateinit var handler: Handler
 
     override fun onPause() {
         super.onPause()
-        viewPager2.removeCallbacks(runnable)
+        handler.removeCallbacks(runnable)
     }
 
-    override fun onStart() {
-        super.onStart()
-        viewPager2.postDelayed(runnable,2000)
+    override fun onResume() {
+        super.onResume()
+        handler.postDelayed(runnable,2000)
     }
     private fun init() {
         imageList = ArrayList()
