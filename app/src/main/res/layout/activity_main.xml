@@ -21,10 +21,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="21dp"
             android:layout_marginTop="46dp"
+            android:layout_marginBottom="67dp"
             android:fontFamily="@font/yeonsung"
             android:text="Explore Your Favorite Food"
             android:textColor="@color/black"
             android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
