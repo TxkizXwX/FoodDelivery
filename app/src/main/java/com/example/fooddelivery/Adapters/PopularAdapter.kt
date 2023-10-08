@@ -11,7 +11,7 @@ import com.example.fooddelivery.databinding.HomeFoodItemBinding
 
 class PopularAdapter(
     val context: Context,
-    val list : ArrayList<PopularModel>
+    var list : ArrayList<PopularModel>
 ) : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularViewHolder {
         val binding = HomeFoodItemBinding.inflate(LayoutInflater.from(context), parent, false)
@@ -42,5 +42,10 @@ class PopularAdapter(
         val foodPrice = binding.homeFoodPrice
 
         val item = binding.root
+    }
+
+    fun updateList(newList : ArrayList<PopularModel>){
+        list = newList
+        notifyDataSetChanged()
     }
 }

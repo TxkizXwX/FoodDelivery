@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.FoodDelivery" parent="Base.Theme.FoodDelivery" />
+
+    <style name="CustomSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
