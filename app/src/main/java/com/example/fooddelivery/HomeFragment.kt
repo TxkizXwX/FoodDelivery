@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -14,6 +15,7 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.fooddelivery.Adapters.ImageSliderAdapter
 import com.example.fooddelivery.Adapters.PopularAdapter
+import com.example.fooddelivery.Fragments.MenuBottomSheetFragment
 import com.example.fooddelivery.Models.PopularModel
 
 class HomeFragment : Fragment() {
@@ -26,6 +28,8 @@ private lateinit var handler: Handler
 private lateinit var popularAdapter: PopularAdapter
 private lateinit var listPopular : ArrayList<PopularModel>
 private lateinit var homeRv : RecyclerView
+
+private lateinit var goMenuText : TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -40,6 +44,12 @@ private lateinit var homeRv : RecyclerView
         viewPager2 = view.findViewById(R.id.imageSlider)
 
         homeRv = view.findViewById(R.id.home_RV)
+        goMenuText = view.findViewById(R.id.go_menu)
+
+        goMenuText.setOnClickListener{
+            val bottomSheetMenu = MenuBottomSheetFragment()
+            bottomSheetMenu.show(parentFragmentManager,"Test")
+        }
 
         listPopular = ArrayList()
         listPopular.add(PopularModel(R.drawable.pop_menu_burger, foodName = "Sandwich", foodPrice = "3$"))

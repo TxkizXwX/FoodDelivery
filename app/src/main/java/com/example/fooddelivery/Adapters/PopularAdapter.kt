@@ -1,9 +1,11 @@
 package com.example.fooddelivery.Adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fooddelivery.DetailsActivity
 import com.example.fooddelivery.Models.PopularModel
 import com.example.fooddelivery.databinding.HomeFoodItemBinding
 
@@ -22,6 +24,13 @@ class PopularAdapter(
         holder.foodName.text = listModel.getFoodName()
         holder.foodPrice.text = listModel.getFoodPrice()
         listModel.getFoodImage()?.let { holder.foodImage.setImageResource(it) }
+
+        holder.item.setOnClickListener {
+            val intent = Intent(context, DetailsActivity :: class.java)
+            intent.putExtra("foodImage",listModel.getFoodImage())
+            intent.putExtra("foodName",listModel.getFoodName())
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -31,5 +40,7 @@ class PopularAdapter(
         val foodName = binding.homeFoodName
         val foodImage = binding.homeFoodImage
         val foodPrice = binding.homeFoodPrice
+
+        val item = binding.root
     }
 }
