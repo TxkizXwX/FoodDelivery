@@ -13,6 +13,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="103dp"
         android:textColor="@color/black"
+        android:textStyle="bold"
         android:fontFamily="@font/yeonsung"
         android:text="Choose Your Location"
         android:textSize="25sp"
@@ -40,6 +41,7 @@
             android:textSize="14sp"
             android:fontFamily="@font/lato"
             android:textColor="@color/black"
+            android:textStyle="bold"
             android:text="Choose Location"/>
     </com.google.android.material.textfield.TextInputLayout>
     
@@ -51,6 +53,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="33dp"
         android:fontFamily="@font/lato"
+        android:textStyle="bold"
         android:text="To provide you with the best dining experience, we need your permission to access your device's location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience."
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -65,6 +68,7 @@
         android:layout_marginBottom="32dp"
         android:textAlignment="center"
         android:text="Design By\nNeatRoots"
+        android:textStyle="bold"
         android:fontFamily="@font/yeonsung"
         android:textSize="16sp"
         android:textColor="@color/greenStart"

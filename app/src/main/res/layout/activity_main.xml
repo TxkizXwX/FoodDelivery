@@ -24,6 +24,7 @@
             android:layout_marginBottom="67dp"
             android:fontFamily="@font/yeonsung"
             android:text="Explore Your Favorite Food"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
