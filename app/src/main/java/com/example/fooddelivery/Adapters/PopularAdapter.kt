@@ -30,7 +30,7 @@ class PopularAdapter(
         val listModel = list[position]
 
         holder.foodName.text = listModel.getFoodName()
-        holder.foodPrice.text = listModel.getFoodPrice()
+        holder.foodPrice.text = listModel.getFoodPrice().toString() + "$"
         listModel.getFoodImage()?.let { holder.foodImage.setImageResource(it) }
 
         holder.item.setOnClickListener {
