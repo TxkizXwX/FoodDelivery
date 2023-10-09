@@ -7,12 +7,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fooddelivery.DetailsActivity
 import com.example.fooddelivery.Models.PopularModel
+import com.example.fooddelivery.Models.SharedModel
 import com.example.fooddelivery.databinding.HomeFoodItemBinding
 
 class PopularAdapter(
     val context: Context,
     var list : ArrayList<PopularModel>
 ) : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
+
+    private lateinit var sharedModel: SharedModel
+
+    fun sharedModel(videoModel: SharedModel){
+        sharedModel = videoModel
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularViewHolder {
         val binding = HomeFoodItemBinding.inflate(LayoutInflater.from(context), parent, false)
         return PopularViewHolder(binding)
@@ -31,6 +39,16 @@ class PopularAdapter(
             intent.putExtra("foodName",listModel.getFoodName())
             context.startActivity(intent)
         }
+
+        holder.addBtn.setOnClickListener {
+            if(sharedModel.inList(listModel)){
+                sharedModel.deleteFromCart(listModel)
+                holder.addBtn.setText("Delete to Cart")
+            } else{
+                sharedModel.addToCart(listModel)
+                holder.addBtn.setText("Add to Cart")
+            }
+        }
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +59,7 @@ class PopularAdapter(
         val foodImage = binding.homeFoodImage
         val foodPrice = binding.homeFoodPrice
 
+        val addBtn = binding.homeFoodBtn
         val item = binding.root
     }
 
