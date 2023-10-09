@@ -17,7 +17,7 @@ class PopularAdapter(
 
     private lateinit var sharedModel: SharedModel
 
-    fun sharedModel(videoModel: SharedModel){
+    fun setSharedModel(videoModel: SharedModel){
         sharedModel = videoModel
     }
 
@@ -43,10 +43,10 @@ class PopularAdapter(
         holder.addBtn.setOnClickListener {
             if(sharedModel.inList(listModel)){
                 sharedModel.deleteFromCart(listModel)
-                holder.addBtn.setText("Delete to Cart")
+                holder.addBtn.setText("Add To Cart")
             } else{
                 sharedModel.addToCart(listModel)
-                holder.addBtn.setText("Add to Cart")
+                holder.addBtn.setText("Delete To Cart")
             }
         }
     }
