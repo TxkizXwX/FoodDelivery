@@ -115,7 +115,7 @@
         android:fontFamily="@font/lato"
         android:outlineAmbientShadowColor="@color/greenStart"
         android:outlineSpotShadowColor="@color/greenStart"
-        android:text="Add To Chart"
+        android:text="Add To Cart"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="14sp"

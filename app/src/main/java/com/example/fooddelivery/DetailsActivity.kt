@@ -2,6 +2,8 @@ package com.example.fooddelivery
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.fooddelivery.Models.PopularModel
+import com.example.fooddelivery.Models.SharedModel
 import com.example.fooddelivery.databinding.ActivityDetailsBinding
 
 class DetailsActivity : AppCompatActivity() {
