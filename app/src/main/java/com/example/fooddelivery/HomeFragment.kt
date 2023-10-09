@@ -52,18 +52,15 @@ private lateinit var goMenuText : TextView
         }
 
         listPopular = ArrayList()
-        listPopular.add(PopularModel(R.drawable.pop_menu_burger, foodName = "Sandwich", foodPrice = "3$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_momo, foodName = "Double Burger", foodPrice = "9$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_sandwich, foodName = "Khinkali", foodPrice = "5$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_burger, foodName = "Sandwich", foodPrice = "3$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_momo, foodName = "Double Burger", foodPrice = "9$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_sandwich, foodName = "Khinkali", foodPrice = "5$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_burger, foodName = "Sandwich", foodPrice = "3$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_momo, foodName = "Double Burger", foodPrice = "9$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_sandwich, foodName = "Khinkali", foodPrice = "5$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_burger, foodName = "Sandwich", foodPrice = "3$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_momo, foodName = "Double Burger", foodPrice = "9$"))
-        listPopular.add(PopularModel(R.drawable.pop_menu_sandwich, foodName = "Khinkali", foodPrice = "5$"))
+        listPopular.add(PopularModel(R.drawable.pop_menu_burger, foodName = "Sandwich", foodPrice = "3$", 1))
+        listPopular.add(PopularModel(R.drawable.pop_menu_momo, foodName = "Double Burger", foodPrice = "9$", 1))
+        listPopular.add(PopularModel(R.drawable.pop_menu_sandwich, foodName = "Khinkali", foodPrice = "5$", 1))
+        listPopular.add(PopularModel(R.drawable.pop_menu_burger, foodName = "Sandwich", foodPrice = "3$", 1))
+        listPopular.add(PopularModel(R.drawable.pop_menu_momo, foodName = "Double Burger", foodPrice = "9$", 1))
+        listPopular.add(PopularModel(R.drawable.pop_menu_sandwich, foodName = "Khinkali", foodPrice = "5$", 1))
+        listPopular.add(PopularModel(R.drawable.pop_menu_burger, foodName = "Sandwich", foodPrice = "3$", 1))
+        listPopular.add(PopularModel(R.drawable.pop_menu_momo, foodName = "Double Burger", foodPrice = "9$", 1))
+        listPopular.add(PopularModel(R.drawable.pop_menu_sandwich, foodName = "Khinkali", foodPrice = "5$", 1))
 
         popularAdapter = PopularAdapter(requireContext(), listPopular)
 
