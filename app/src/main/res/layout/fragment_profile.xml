@@ -1,14 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/greenStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeonsung"
+            android:padding="8dp"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/lato"
+            android:hint="Your name"
+            android:inputType="textPersonName"
+            android:maxLength="25"
+            android:paddingLeft="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/greenStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeonsung"
+            android:padding="8dp"
+            android:text="Address"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/lato"
+            android:hint="Your address"
+            android:inputType="textPostalAddress"
+            android:maxLength="25"
+            android:paddingLeft="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/greenStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeonsung"
+            android:padding="8dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/lato"
+            android:hint="Your email"
+            android:inputType="phone"
+            android:maxLength="25"
+            android:paddingLeft="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12sp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_bg"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/greenStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeonsung"
+            android:padding="8dp"
+            android:text="Phone"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/lato"
+            android:hint="Your phone"
+            android:inputType="phone"
+            android:maxLength="25"
+            android:paddingLeft="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logDutUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:drawablePadding="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:padding="10dp"
+        android:drawableEnd="@drawable/ic_log"
+        android:fontFamily="@font/lato"
+        android:gravity="center_vertical"
+        android:text="Log Out"
+        android:textColor="@color/greenStart"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/place_my_order"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/text_view_bg"
+        android:elevation="8dp"
+        android:fontFamily="@font/yeonsung"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:shadowColor="@color/black"
+        android:shadowDy="@integer/material_motion_duration_long_2"
+        android:text="Save Information"
+        android:textAllCaps="false"
+        android:textColor="@color/greenStart"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logDutUser" />
+</androidx.constraintlayout.widget.ConstraintLayout>
